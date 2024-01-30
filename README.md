@@ -1,70 +1,207 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="https://camo.githubusercontent.com/a4e71a0942263821f4cb9213b2808af909e46967d9ed3ccee6e7e122f276efd6/68747470733a2f2f696d672e69636f6e73382e636f6d2f65787465726e616c2d74616c2d72657669766f2d726567756c61722d74616c2d72657669766f2f39362f65787465726e616c2d726561646d652d69732d612d656173792d746f2d6275696c642d612d646576656c6f7065722d6875622d746861742d6164617074732d746f2d7468652d757365722d6c6f676f2d726567756c61722d74616c2d72657669766f2e706e67" width="100" />
+</p>
+<p align="center">
+    <h1 align="center">Exercício Ant Design</h1>
+</p>
+<p align="center">
+    <em>Exercício para a disciplina de Técnicas Avançadas de CSS do curso de Desenvolvimento Web Front-End - PUC Minas</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/camilarozendo/exercicioAntD?style=default&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/camilarozendo/exercicioAntD?style=default&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/camilarozendo/exercicioAntD?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/camilarozendo/exercicioAntD?style=default&color=0080ff" alt="repo-language-count">
+<p>
+<p align="center">
+	<!-- default option, no dependency badges. -->
+</p>
+<hr>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔗 Quick Links
 
-## Available Scripts
+> - [ Overview](#-overview)
+> - [ Features](#-features)
+> - [ Repository Structure](#-repository-structure)
+> - [ Getting Started](#-getting-started)
+>   - [ Installation](#-installation)
+>   - [ Running exercicioAntD](#-running-exercicioAntD)
+>   - [ Tests](#-tests)
+> - [ Contributing](#-contributing)
+> - [ License](#-license)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📍 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Esta aplicação React é um exercício que tem como objetivo a utilização do framework Ant Design para a construção da interface do usuário.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🔮 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Ant Design:
+* O código faz uso extensivo dos componentes do Ant Design para criar a interface do usuário. Alguns desses componentes incluem 'Layout', 'Menu', 'Card', 'Breadcrumb', 'Typography', entre outros.
+* O tema da aplicação é personalizado usando tokens do Ant Design, como 'colorBgContainer', que é utilizado para definir o fundo de alguns elementos da interface.
 
-### `npm run build`
+#### Menu Lateral e Breadcrumb:
+* Um menu lateral é criado usando o componente 'Menu' do Ant Design, com ícones e opções de navegação.
+* O componente 'Breadcrumb' é utilizado para exibir uma trilha de navegação no topo da página.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Conteúdo Principal:
+* O conteúdo principal da página está dentro do componente 'Content' do Ant Design.
+* Uma Breadcrumb é exibida acima do conteúdo principal para indicar a localização do usuário na aplicação.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Cards no Conteúdo Principal:
+* O conteúdo principal contém uma seção com quatro cartões ('Card') organizados em uma linha com estilos de flexbox. Cada cartão possui um estilo específico, incluindo altura fixa.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### useState:
+* O estado local é gerenciado usando o hook 'useState'. Um exemplo disso é o estado 'collapsed', que controla se o menu lateral está recolhido ou expandido.
 
-### `npm run eject`
+#### Responsividade:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* O layout é projetado para ser responsivo, ajustando-se à altura da visualização (`minHeight: '100vh'`) e utilizando o componente 'Sider' para criar um menu lateral recolhível.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Footer:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Um rodapé ('Footer') exibe informações de crédito, indicando que a aplicação foi criada por Ant UED.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Em resumo, a aplicação é um exemplo de utilização do framework Ant Design para criar uma interface de usuário React. Ela incorpora componentes comumente utilizados, como menus, cartões e breadcrumb, proporcionando uma estrutura organizada e estilizada para uma aplicação web.
 
-## Learn More
+## 🧩 Repository Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+└── exercicioAntD/
+   ├── package-lock.json
+   ├── package.json
+   ├── public/
+   │   ├── index.html
+   │   ├── logo.png
+   │   └── manifest.json
+   └── src/
+      ├── App.css
+      ├── App.js
+      ├── App.test.js
+      ├── index.js
+      ├── logo.svg
+      ├── reportWebVitals.js
+      └── setupTests.js
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🚀 Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+***Requirements***
 
-### Making a Progressive Web App
+Ensure you have the following dependencies installed on your system:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* **Node.js**
 
-### Advanced Configuration
+### ⚙️ Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Clone the exercicioAntD repository:
 
-### Deployment
+```sh
+git clone https://github.com/camilarozendo/exercicioAntD
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Change to the project directory:
 
-### `npm run build` fails to minify
+```sh
+cd exercicioAntD
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Install the dependencies:
+
+```sh
+npm install
+```
+
+### 👩‍💻 Running exercicioAntD
+
+Use the following command to run exercicioAntD:
+
+```sh
+node app.js
+```
+
+###  🧪 Tests
+
+To execute tests, run:
+
+```sh
+npm test
+```
+
+---
+
+
+##  🤝 Contributing
+
+Contributions are welcome! Here are several ways you can contribute:
+
+- **[Submit Pull Requests](https://github/camilarozendo/exercicioAntD/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://github/camilarozendo/exercicioAntD/discussions)**: Share your insights, provide feedback, or ask questions.
+- **[Report Issues](https://github/camilarozendo/exercicioAntD/issues)**: Submit bugs found or log feature requests for exercicioAntD
+<details closed>
+    <summary>Contributing Guidelines</summary>
+
+1. **Fork the Repository**: Start by forking the project repository to your GitHub account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a Git client.
+   ```sh
+   git clone https://github.com/camilarozendo/exercicioAntD
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+6. **Push to GitHub**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+
+Once your PR is reviewed and approved, it will be merged into the main branch.
+
+</details>
+
+---
+
+##  📄 License
+
+MIT License
+
+Copyright (c) [2023] [Camila Rozendo]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+
+[**Return**](#-quick-links)
+
+---
